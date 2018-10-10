@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on </title>
+    <link>https://namnh68.github.io/blog/tags/</link>
+    <description>Recent content in Tags on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 09 Oct 2018 23:41:46 +0700</lastBuildDate>
+    
+	<atom:link href="https://namnh68.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Devops</title>
+      <link>https://namnh68.github.io/blog/tags/devops/</link>
+      <pubDate>Tue, 09 Oct 2018 23:41:46 +0700</pubDate>
+      
+      <guid>https://namnh68.github.io/blog/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
