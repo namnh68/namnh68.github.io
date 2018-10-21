@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud on Nam Nguyen Hoai Blog</title>
+    <link>https://example.org/tags/cloud/</link>
+    <description>Recent content in Cloud on Nam Nguyen Hoai Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Oct 2018 11:43:33 +0700</lastBuildDate>
+    
+	<atom:link href="https://example.org/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install OpenStack AIO via Kolla-ansible</title>
+      <link>https://example.org/2018/10/install-openstack-aio-via-kolla-ansible/</link>
+      <pubDate>Sun, 14 Oct 2018 11:43:33 +0700</pubDate>
+      
+      <guid>https://example.org/2018/10/install-openstack-aio-via-kolla-ansible/</guid>
+      <description>Introduction This article is my note during installing OpenStack AIO by Kolla-ansible.
+Topology We will use two nodes. One is to install OpenStack, one is to install Kolla-ansible which will be used to install OpenStack to the OpenStack node.
+Installing Step 1: Prepare environment  On Kolla-ansible node, we need to install Git, and some packages.  yum install epel-release -y yum install python-pip -y yum install python-devel libffi-devel gcc openssl-devel libselinux-python -y yum install ansible -y   On OpenStack node, we need to create a volume group with &amp;ldquo;&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>
