@@ -13,10 +13,10 @@
 
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kolla">
-<meta name="twitter:title" content="Kolla">
-<meta property="og:url" content="https://example.org/tags/kolla/">
-<meta property="twitter:url" content="https://example.org/tags/kolla/">
+<meta property="og:title" content="Devops">
+<meta name="twitter:title" content="Devops">
+<meta property="og:url" content="https://example.org/categories/devops/">
+<meta property="twitter:url" content="https://example.org/categories/devops/">
 <meta property="og:site_name" content="Nam Nguyen Hoai Blog">
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta name="twitter:description" content="Hugo tranquilpeak theme demo">
@@ -43,16 +43,16 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/043f8e2c307161bebbde436f911ca9f7?s=640">
 
 
-    <title>Kolla</title>
+    <title>Devops</title>
 
     <link rel="icon" href="https://example.org/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://example.org/tags/kolla/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://example.org/categories/devops/index.xml">
     
 
     
 
-    <link rel="canonical" href="https://example.org/tags/kolla/">
+    <link rel="canonical" href="https://example.org/categories/devops/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -243,20 +243,20 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://example.org/2018/10/install-openstack-aio-via-kolla-ansible/">
-          Install OpenStack AIO via Kolla-ansible
+        <a class="link-unstyled" href="https://example.org/2018/10/jenkins-install-centos/">
+          Jenkins Install CentOS
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-10-14T11:43:33&#43;07:00">
+      <time itemprop="datePublished" datetime="2018-10-12T20:36:13&#43;07:00">
         
   
   
   
   
-    October 14, 2018
+    October 12, 2018
   
 
       </time>
@@ -266,7 +266,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://example.org/categories/cloud">cloud</a>
+      <a class="category-link" href="https://example.org/categories/devops">devops</a>
     
   
 
@@ -275,20 +275,84 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        Introduction This article is my note during installing OpenStack AIO by Kolla-ansible.
-Topology We will use two nodes. One is to install OpenStack, one is to install Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  On Kolla-ansible node, we need to install Git, and some packages.  yum install epel-release -y yum install python-pip -y yum install python-devel libffi-devel gcc openssl-devel libselinux-python -y yum install ansible -y   On OpenStack node, we need to create a volume group with &ldquo;&rdquo;.
+        Introduction This article is to guide how to setup Jenkins on CentOS 7. All below commands will be run with root privilege.
+Installing Step 1: Update CentOS 7 system  You need to update your system to get lastes stable packages, then reboot.  yum install epel-release -y yum update reboot   Stop SeLinux   Step 2: Install Java 1.8  Before you can install Jenkins, you need to setup a Java virtual machine on your system.
       
       <p>
-        <a href="https://example.org/2018/10/install-openstack-aio-via-kolla-ansible/" class="postShorten-excerpt_link link">Continue reading</a>
+        <a href="https://example.org/2018/10/jenkins-install-centos/" class="postShorten-excerpt_link link">Continue reading</a>
         
       </p>
     </div>
   </div>
   
-    <a href="https://example.org/2018/10/install-openstack-aio-via-kolla-ansible/">
+    <a href="https://example.org/2018/10/jenkins-install-centos/">
       <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://example.org/images/kolla.jpg"/>
+        <img alt="" itemprop="image" src="https://example.org/images/jenkins_centos.png"/>
+      </div>
+    </a>
+  
+</article>
+
+            
+              
+  
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://example.org/2018/10/install-jenkins-on-ubuntu-16.04/">
+          Install Jenkins on Ubuntu 16.04
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-10-09T23:41:46&#43;07:00">
+        
+  
+  
+  
+  
+    October 9, 2018
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/devops">devops</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        Introduction This guide is to install Jenkins on Ubuntu 16.04. Please make sure that your system already was updated and running commands with root privilege.
+Installing Step 1: Install Java OpenJDK 8 sudo apt update sudo apt install python-software-properties apt-transport-https -y sudo add-apt-repository ppa:openjdk-r/ppa sudo apt update sudo apt install openjdk-8-jdk -y  Verify Java after installing
+java -version  The command should be have a result like this:
+      
+      <p>
+        <a href="https://example.org/2018/10/install-jenkins-on-ubuntu-16.04/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://example.org/2018/10/install-jenkins-on-ubuntu-16.04/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://example.org/images/jenkins.png"/>
       </div>
     </a>
   
