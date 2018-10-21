@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Nam Nguyen Hoai Blog</title>
-    <link>https://example.org/categories/</link>
-    <description>Recent content in Categories on Nam Nguyen Hoai Blog</description>
+    <title>Categories on Nam Nguyen Hoai</title>
+    <link>https://namnh68.github.io/categories/</link>
+    <description>Recent content in Categories on Nam Nguyen Hoai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://namnh68.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cloud</title>
-      <link>https://example.org/categories/cloud/</link>
+      <link>https://namnh68.github.io/categories/cloud/</link>
       <pubDate>Sun, 14 Oct 2018 11:43:33 +0700</pubDate>
       
-      <guid>https://example.org/categories/cloud/</guid>
+      <guid>https://namnh68.github.io/categories/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Devops</title>
-      <link>https://example.org/categories/devops/</link>
+      <link>https://namnh68.github.io/categories/devops/</link>
       <pubDate>Fri, 12 Oct 2018 20:36:13 +0700</pubDate>
       
-      <guid>https://example.org/categories/devops/</guid>
+      <guid>https://namnh68.github.io/categories/devops/</guid>
       <description></description>
     </item>
     

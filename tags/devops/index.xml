@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Devops on Nam Nguyen Hoai Blog</title>
-    <link>https://example.org/tags/devops/</link>
-    <description>Recent content in Devops on Nam Nguyen Hoai Blog</description>
+    <title>Devops on Nam Nguyen Hoai</title>
+    <link>https://namnh68.github.io/tags/devops/</link>
+    <description>Recent content in Devops on Nam Nguyen Hoai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Oct 2018 20:36:13 +0700</lastBuildDate>
     
-	<atom:link href="https://example.org/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://namnh68.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Jenkins Install CentOS</title>
-      <link>https://example.org/2018/10/jenkins-install-centos/</link>
+      <title>Install Jenkins on CentOS 7</title>
+      <link>https://namnh68.github.io/2018/10/install-jenkins-on-centos-7/</link>
       <pubDate>Fri, 12 Oct 2018 20:36:13 +0700</pubDate>
       
-      <guid>https://example.org/2018/10/jenkins-install-centos/</guid>
+      <guid>https://namnh68.github.io/2018/10/install-jenkins-on-centos-7/</guid>
       <description>Introduction This article is to guide how to setup Jenkins on CentOS 7. All below commands will be run with root privilege.
 Installing Step 1: Update CentOS 7 system  You need to update your system to get lastes stable packages, then reboot.  yum install epel-release -y yum update reboot   Stop SeLinux   Step 2: Install Java 1.8  Before you can install Jenkins, you need to setup a Java virtual machine on your system.</description>
     </item>
     
     <item>
       <title>Install Jenkins on Ubuntu 16.04</title>
-      <link>https://example.org/2018/10/install-jenkins-on-ubuntu-16.04/</link>
+      <link>https://namnh68.github.io/2018/10/install-jenkins-on-ubuntu-16.04/</link>
       <pubDate>Tue, 09 Oct 2018 23:41:46 +0700</pubDate>
       
-      <guid>https://example.org/2018/10/install-jenkins-on-ubuntu-16.04/</guid>
+      <guid>https://namnh68.github.io/2018/10/install-jenkins-on-ubuntu-16.04/</guid>
       <description>Introduction This guide is to install Jenkins on Ubuntu 16.04. Please make sure that your system already was updated and running commands with root privilege.
 Installing Step 1: Install Java OpenJDK 8 sudo apt update sudo apt install python-software-properties apt-transport-https -y sudo add-apt-repository ppa:openjdk-r/ppa sudo apt update sudo apt install openjdk-8-jdk -y  Verify Java after installing
 java -version  The command should be have a result like this:</description>
