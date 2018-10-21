@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://namnh68.github.io/2018/10/test/</loc>
+    <lastmod>2018-10-21T11:03:22+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/</loc>
     <lastmod>2018-10-14T11:43:33+07:00</lastmod>
   </url>
@@ -64,13 +69,13 @@
   
   <url>
     <loc>https://namnh68.github.io/</loc>
-    <lastmod>2018-10-14T11:43:33+07:00</lastmod>
+    <lastmod>2018-10-21T11:03:22+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://namnh68.github.io/post/</loc>
-    <lastmod>2018-10-14T11:43:33+07:00</lastmod>
+    <lastmod>2018-10-21T11:03:22+07:00</lastmod>
     <priority>0</priority>
   </url>
   
