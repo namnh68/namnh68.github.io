@@ -7,47 +7,29 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.49 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Nam Nguyen Hoai">
-<meta name="keywords" content="kolla, cloud, development, devops, cloud, openstack">
-<meta name="description" content="Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
-Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.">
+<meta name="keywords" content=", development, devops, cloud, openstack">
+<meta name="description" content="Nguyễn Hoài Nam">
 
 
-<meta property="og:description" content="Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
-Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.">
+<meta property="og:description" content="Nguyễn Hoài Nam">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Install OpenStack AIO via Kolla-ansible">
-<meta name="twitter:title" content="Install OpenStack AIO via Kolla-ansible">
-<meta property="og:url" content="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/">
-<meta property="twitter:url" content="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/">
+<meta property="og:title" content="Test">
+<meta name="twitter:title" content="Test">
+<meta property="og:url" content="https://namnh68.github.io/2018/10/test/">
+<meta property="twitter:url" content="https://namnh68.github.io/2018/10/test/">
 <meta property="og:site_name" content="Nam Nguyen Hoai">
-<meta property="og:description" content="Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
-Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.">
-<meta name="twitter:description" content="Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
-Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.">
+<meta property="og:description" content="Nguyễn Hoài Nam">
+<meta name="twitter:description" content="Nguyễn Hoài Nam">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2018-10-14T11:43:33">
+    <meta property="article:published_time" content="2018-10-22T23:31:41">
   
   
-    <meta property="article:modified_time" content="2018-10-14T11:43:33">
+    <meta property="article:modified_time" content="2018-10-22T23:31:41">
   
   
   
-    
-      <meta property="article:section" content="cloud">
-    
-  
-  
-    
-      <meta property="article:tag" content="cloud">
-    
-      <meta property="article:tag" content="kolla">
-    
   
 
 
@@ -63,9 +45,6 @@ Installing Step 1: Prepare environment  Networking: You need to setup two nodes 
 
 
 
-  <meta property="og:image" content="https://namnh68.github.io/images/kolla.jpg">
-  <meta property="twitter:image" content="https://namnh68.github.io/images/kolla.jpg">
-
 
 
 
@@ -74,14 +53,14 @@ Installing Step 1: Prepare environment  Networking: You need to setup two nodes 
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/043f8e2c307161bebbde436f911ca9f7?s=640">
 
 
-    <title>Install OpenStack AIO via Kolla-ansible</title>
+    <title>Test</title>
 
     <link rel="icon" href="https://namnh68.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/">
+    <link rel="canonical" href="https://namnh68.github.io/2018/10/test/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -259,183 +238,37 @@ Installing Step 1: Prepare environment  Networking: You need to setup two nodes 
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Install OpenStack AIO via Kolla-ansible
+      Test
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-10-14T11:43:33&#43;07:00">
+      <time itemprop="datePublished" datetime="2018-10-22T23:31:41&#43;07:00">
         
   
   
   
   
-    October 14, 2018
+    October 22, 2018
   
 
       </time>
     
     
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://namnh68.github.io/categories/cloud">cloud</a>
-    
-  
-
   </div>
 
 </div>
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
-
-<h3 id="introduction">Introduction</h3>
-
-<p>This article is my note during installing OpenStack AIO via Kolla-ansible.</p>
-
-<h3 id="topology">Topology</h3>
-
-<p>We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.</p>
-
-<p><img src="https://namnh68.github.io/images/Kolla-two-nodes.png" alt="Kolla two node" /></p>
-
-<h3 id="installing">Installing</h3>
-
-<h4 id="step-1-prepare-environment">Step 1: Prepare environment</h4>
-
-<ul>
-<li><p>Networking:
-You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.</p></li>
-
-<li><p>On Kolla-ansible node, we need to install Git, and some packages.</p></li>
-</ul>
-
-<pre><code>yum install epel-release -y
-yum install python-pip -y
-yum install python-devel libffi-devel gcc openssl-devel libselinux-python -y
-yum install ansible -y
-</code></pre>
-
-<ul>
-<li>On OpenStack node, we need to create a volume group. Assuming, OpenStack node has two disks including sda and sdb. sdb is for cinder volume using.</li>
-</ul>
-
-<pre><code>pvcreate /dev/sdb
-vgcreate cinder-volumes /dev/sdb
-</code></pre>
-
-<h4 id="step-2-prepare-kolla-ansible-on-kolla-node">Step 2: Prepare Kolla-ansible on Kolla node</h4>
-
-<p><strong>Note:</strong> Run below commands on Kolla node</p>
-
-<ul>
-<li>Edit /etc/hosts and copy public key to ssh connect to OpenStack node without password.</li>
-</ul>
-
-<pre><code>echo &quot;192.168.20.30 kolla-aio&quot; &gt;&gt; /etc/hosts
-ssh-keygen
-# Note: Just press Enter to continue
-ssh-copy-id root@ssh-copy-id
-</code></pre>
-
-<ul>
-<li><p>Install Kolla-ansible version</p>
-
-<pre><code>pip install kolla-ansible==6.1.0
-pip show kolla-ansible
-</code></pre></li>
-
-<li><p>Copy the configuration file</p></li>
-</ul>
-
-<pre><code>cp -r /usr/share/kolla-ansible/etc_examples/kolla /etc/
-cp /usr/share/kolla-ansible/ansible/inventory/* ~/
-</code></pre>
-
-<ul>
-<li><p>Edit all-in-one inventory and the globals.yml file to map my requirements.</p>
-
-<ul>
-<li>The globals.yml file should be like this <a href="https://gist.github.com/namnh68/6980389930c37f668b79f098a2fe53ec">link</a></li>
-<li>The all-in-one inventory should be like this <a href="https://gist.github.com/namnh68/d91e9893b5439db629d83883f46cddbc">link</a></li>
-</ul></li>
-</ul>
-
-<h4 id="step-3-start-installing-openstack">Step 3: Start installing OpenStack</h4>
-
-<p>Run below commands on Kolla-ansible node</p>
-
-<ul>
-<li>Boottrap to install Docker on OpenStack node</li>
-</ul>
-
-<pre><code>kolla-ansible -i /root/all-in-one bootstrap-servers
-</code></pre>
-
-<ul>
-<li>Prechecks to make sure everity is OK</li>
-</ul>
-
-<pre><code>kolla-ansible -i /root/all-in-one prechecks
-</code></pre>
-
-<ul>
-<li>Pull neccessary images</li>
-</ul>
-
-<pre><code>kolla-ansible -i /root/all-in-one pull
-</code></pre>
-
-<ul>
-<li>Deploy OpenStack</li>
-</ul>
-
-<pre><code>kolla-ansible -i /root/all-in-one deploy
-</code></pre>
-
-<p>Idealy, the result of above command is OK and OpenStack is already installed on the OpenStack node.</p>
-
-<ul>
-<li>Create admin file and install OpenStack client.</li>
-</ul>
-
-<pre><code>kolla-ansible -i /root/all-in-one post-deploy
-yum install centos-release-openstack-queens -y
-yum install python-openstackclient -y
-</code></pre>
-
-<ul>
-<li>Create a script to setup prepare OpenStack resource before using</li>
-</ul>
-
-<pre><code>wget https://gist.githubusercontent.com/namnh68/1b5e25a270c5ff6b6bc9adf362398a30/raw/68072e9a7f423c0a61f8b4c39fbb7ac5b414175e/init-runonce.sh
-
-bash init-runonce.sh
-</code></pre>
-
-<p>Done, you can access Horizon for now. See the /etc/kolla/admin-openrc.sh to know your admin password.</p>
+              <p>Nguyễn Hoài Nam</p>
 
               
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
-              
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">TAGGED IN</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="https://namnh68.github.io/tags/cloud/">cloud</a>
-
-  <a class="tag tag--primary tag--small" href="https://namnh68.github.io/tags/kolla/">kolla</a>
-
-                  </div>
-                
               
             
             <div class="post-actions-wrap">
@@ -445,7 +278,7 @@ bash init-runonce.sh
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/cicd-in-openstack/" data-tooltip="CICD in OpenStack">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -453,7 +286,7 @@ bash init-runonce.sh
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/install-jenkins-on-centos-7/" data-tooltip="Install Jenkins on CentOS 7">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/cicd-in-openstack/" data-tooltip="CICD in OpenStack">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -471,24 +304,18 @@ bash init-runonce.sh
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/%29">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/test/%29">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/%29">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/test/%29">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
       
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
       
       <li class="post-action">
         
@@ -501,13 +328,6 @@ bash init-runonce.sh
   
 </div>
 
-            
-              
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <script id="disqus_thread" src="//blog-xv1my5jcxo.disqus.com/count.js" async></script>
-</div>
-              
             
           </div>
         </article>
@@ -526,7 +346,7 @@ bash init-runonce.sh
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/cicd-in-openstack/" data-tooltip="CICD in OpenStack">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -534,7 +354,7 @@ bash init-runonce.sh
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/install-jenkins-on-centos-7/" data-tooltip="Install Jenkins on CentOS 7">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/cicd-in-openstack/" data-tooltip="CICD in OpenStack">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -552,24 +372,18 @@ bash init-runonce.sh
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/%29">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/test/%29">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/%29">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/test/%29">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
       
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
       
       <li class="post-action">
         
@@ -588,13 +402,13 @@ bash init-runonce.sh
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https%3A%2F%2Fnamnh68.github.io%2F2018%2F10%2Finstall-openstack-aio-via-kolla-ansible%2F%29">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https%3A%2F%2Fnamnh68.github.io%2F2018%2F10%2Ftest%2F%29">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https%3A%2F%2Fnamnh68.github.io%2F2018%2F10%2Finstall-openstack-aio-via-kolla-ansible%2F%29">
+        <a class="share-option-btn" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https%3A%2F%2Fnamnh68.github.io%2F2018%2F10%2Ftest%2F%29">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
@@ -798,30 +612,6 @@ $(document).ready(function() {
 </script>
 
 
-  
-    
-      <script>
-        var disqus_config = function () {
-          this.page.url = 'https:\/\/namnh68.github.io\/2018\/10\/install-openstack-aio-via-kolla-ansible\/';
-          
-            this.page.identifier = '\/2018\/10\/install-openstack-aio-via-kolla-ansible\/'
-          
-        };
-        (function() {
-          
-          
-          if (window.location.hostname == "localhost") {
-            return;
-          }
-          var d = document, s = d.createElement('script');
-          var disqus_shortname = 'blog-xv1my5jcxo';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-    
   
 
 
