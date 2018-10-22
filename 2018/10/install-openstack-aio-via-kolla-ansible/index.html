@@ -8,26 +8,26 @@
 <meta name="generator" content="Hugo 0.49 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Nam Nguyen Hoai">
 <meta name="keywords" content="kolla, cloud, development, devops, cloud, openstack">
-<meta name="description" content="Introduction This article is my note during installing OpenStack AIO by Kolla-ansible.
-Topology We will use two nodes. One is to install OpenStack, one is to install Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  On Kolla-ansible node, we need to install Git, and some packages.  yum install epel-release -y yum install python-pip -y yum install python-devel libffi-devel gcc openssl-devel libselinux-python -y yum install ansible -y   On OpenStack node, we need to create a volume group with &ldquo;&rdquo;.">
+<meta name="description" content="Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
+Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
+Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.">
 
 
-<meta property="og:description" content="Introduction This article is my note during installing OpenStack AIO by Kolla-ansible.
-Topology We will use two nodes. One is to install OpenStack, one is to install Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  On Kolla-ansible node, we need to install Git, and some packages.  yum install epel-release -y yum install python-pip -y yum install python-devel libffi-devel gcc openssl-devel libselinux-python -y yum install ansible -y   On OpenStack node, we need to create a volume group with &ldquo;&rdquo;.">
+<meta property="og:description" content="Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
+Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
+Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Install OpenStack AIO via Kolla-ansible">
 <meta name="twitter:title" content="Install OpenStack AIO via Kolla-ansible">
 <meta property="og:url" content="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/">
 <meta property="twitter:url" content="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/">
 <meta property="og:site_name" content="Nam Nguyen Hoai">
-<meta property="og:description" content="Introduction This article is my note during installing OpenStack AIO by Kolla-ansible.
-Topology We will use two nodes. One is to install OpenStack, one is to install Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  On Kolla-ansible node, we need to install Git, and some packages.  yum install epel-release -y yum install python-pip -y yum install python-devel libffi-devel gcc openssl-devel libselinux-python -y yum install ansible -y   On OpenStack node, we need to create a volume group with &ldquo;&rdquo;.">
-<meta name="twitter:description" content="Introduction This article is my note during installing OpenStack AIO by Kolla-ansible.
-Topology We will use two nodes. One is to install OpenStack, one is to install Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  On Kolla-ansible node, we need to install Git, and some packages.  yum install epel-release -y yum install python-pip -y yum install python-devel libffi-devel gcc openssl-devel libselinux-python -y yum install ansible -y   On OpenStack node, we need to create a volume group with &ldquo;&rdquo;.">
+<meta property="og:description" content="Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
+Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
+Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.">
+<meta name="twitter:description" content="Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
+Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
+Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.">
 <meta property="og:locale" content="en-us">
 
   
@@ -295,18 +295,23 @@ Installing Step 1: Prepare environment  On Kolla-ansible node, we need to instal
 
 <h3 id="introduction">Introduction</h3>
 
-<p>This article is my note during installing OpenStack AIO by Kolla-ansible.</p>
+<p>This article is my note during installing OpenStack AIO via Kolla-ansible.</p>
 
 <h3 id="topology">Topology</h3>
 
-<p>We will use two nodes. One is to install OpenStack, one is to install Kolla-ansible which will be used to install OpenStack to the OpenStack node.</p>
+<p>We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.</p>
+
+<p><img src="https://namnh68.github.io/images/Kolla-two-nodes.png" alt="Kolla two node" /></p>
 
 <h3 id="installing">Installing</h3>
 
 <h4 id="step-1-prepare-environment">Step 1: Prepare environment</h4>
 
 <ul>
-<li>On Kolla-ansible node, we need to install Git, and some packages.</li>
+<li><p>Networking:
+You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.</p></li>
+
+<li><p>On Kolla-ansible node, we need to install Git, and some packages.</p></li>
 </ul>
 
 <pre><code>yum install epel-release -y
@@ -316,7 +321,7 @@ yum install ansible -y
 </code></pre>
 
 <ul>
-<li>On OpenStack node, we need to create a volume group with &ldquo;&rdquo;. Assuming, OpenStack node has two disks including sda and sdb. sdb is for cinder volume using.</li>
+<li>On OpenStack node, we need to create a volume group. Assuming, OpenStack node has two disks including sda and sdb. sdb is for cinder volume using.</li>
 </ul>
 
 <pre><code>pvcreate /dev/sdb
@@ -440,7 +445,7 @@ bash init-runonce.sh
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/cicd-in-openstack/" data-tooltip="CICD in OpenStack">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -521,7 +526,7 @@ bash init-runonce.sh
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/cicd-in-openstack/" data-tooltip="CICD in OpenStack">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -648,6 +653,23 @@ bash init-runonce.sh
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://namnh68.github.io/2018/10/cicd-in-openstack/">
+                <h3 class="media-heading">CICD in OpenStack</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/">
                 <h3 class="media-heading">Install OpenStack AIO via Kolla-ansible</h3>
               </a>
@@ -656,9 +678,9 @@ bash init-runonce.sh
                   Oct 10, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">Introduction This article is my note during installing OpenStack AIO by Kolla-ansible.
-Topology We will use two nodes. One is to install OpenStack, one is to install Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  On Kolla-ansible node, we need to install Git, and some packages.  yum install epel-release -y yum install python-pip -y yum install python-devel libffi-devel gcc openssl-devel libselinux-python -y yum install ansible -y   On OpenStack node, we need to create a volume group with &ldquo;&rdquo;.</div>
+              <div class="media-content hide-xs font-merryweather">Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
+Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
+Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.</div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -708,7 +730,7 @@ java -version  The command should be have a result like this:</div>
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         3 posts found
+         4 posts found
       </p>
     </div>
   </div>

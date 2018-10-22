@@ -6,10 +6,19 @@
     <description>Recent content in Devops on Nam Nguyen Hoai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Oct 2018 20:36:13 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Oct 2018 20:40:48 +0700</lastBuildDate>
     
 	<atom:link href="https://namnh68.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CICD in OpenStack</title>
+      <link>https://namnh68.github.io/2018/10/cicd-in-openstack/</link>
+      <pubDate>Mon, 22 Oct 2018 20:40:48 +0700</pubDate>
+      
+      <guid>https://namnh68.github.io/2018/10/cicd-in-openstack/</guid>
+      <description>OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.</description>
+    </item>
     
     <item>
       <title>Install Jenkins on CentOS 7</title>

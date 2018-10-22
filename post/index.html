@@ -240,6 +240,69 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://namnh68.github.io/2018/10/cicd-in-openstack/">
+          CICD in OpenStack
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-10-22T20:40:48&#43;07:00">
+        
+  
+  
+  
+  
+    October 22, 2018
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://namnh68.github.io/categories/devops">devops</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        Overview about CICD in OpenStack including tool, component, architecture.
+      
+      <p>
+        <a href="https://namnh68.github.io/2018/10/cicd-in-openstack/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://namnh68.github.io/2018/10/cicd-in-openstack/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://namnh68.github.io/images/zuul.png"/>
+      </div>
+    </a>
+  
+</article>
+
+          
+            
+  
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/">
           Install OpenStack AIO via Kolla-ansible
         </a>
@@ -272,9 +335,9 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        Introduction This article is my note during installing OpenStack AIO by Kolla-ansible.
-Topology We will use two nodes. One is to install OpenStack, one is to install Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  On Kolla-ansible node, we need to install Git, and some packages.  yum install epel-release -y yum install python-pip -y yum install python-devel libffi-devel gcc openssl-devel libselinux-python -y yum install ansible -y   On OpenStack node, we need to create a volume group with &ldquo;&rdquo;.
+        Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
+Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
+Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.
       
       <p>
         <a href="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -482,6 +545,23 @@ java -version  The command should be have a result like this:
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://namnh68.github.io/2018/10/cicd-in-openstack/">
+                <h3 class="media-heading">CICD in OpenStack</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/">
                 <h3 class="media-heading">Install OpenStack AIO via Kolla-ansible</h3>
               </a>
@@ -490,9 +570,9 @@ java -version  The command should be have a result like this:
                   Oct 10, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">Introduction This article is my note during installing OpenStack AIO by Kolla-ansible.
-Topology We will use two nodes. One is to install OpenStack, one is to install Kolla-ansible which will be used to install OpenStack to the OpenStack node.
-Installing Step 1: Prepare environment  On Kolla-ansible node, we need to install Git, and some packages.  yum install epel-release -y yum install python-pip -y yum install python-devel libffi-devel gcc openssl-devel libselinux-python -y yum install ansible -y   On OpenStack node, we need to create a volume group with &ldquo;&rdquo;.</div>
+              <div class="media-content hide-xs font-merryweather">Introduction This article is my note during installing OpenStack AIO via Kolla-ansible.
+Topology We will use two nodes. One is for OpenStack, one is for Kolla-ansible which will be used to install OpenStack to the OpenStack node.
+Installing Step 1: Prepare environment  Networking: You need to setup two nodes with two interfaces as the above topology. Kolla-ansible node with connect to OpenStack node via management network. OpenStack node will be configured to get public network as provider network in OpenStack system.</div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -542,7 +622,7 @@ java -version  The command should be have a result like this:</div>
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         3 posts found
+         4 posts found
       </p>
     </div>
   </div>

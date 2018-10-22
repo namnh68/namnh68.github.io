@@ -7,34 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.49 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Nam Nguyen Hoai">
-<meta name="keywords" content=", development, devops, cloud, openstack">
-<meta name="description" content="Introduction This guide is to install Jenkins on Ubuntu 16.04. Please make sure that your system already was updated and running commands with root privilege.
-Installing Step 1: Install Java OpenJDK 8 sudo apt update sudo apt install python-software-properties apt-transport-https -y sudo add-apt-repository ppa:openjdk-r/ppa sudo apt update sudo apt install openjdk-8-jdk -y  Verify Java after installing
-java -version  The command should be have a result like this:">
+<meta name="keywords" content="openstack, devops, development, devops, cloud, openstack">
+<meta name="description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.">
 
 
-<meta property="og:description" content="Introduction This guide is to install Jenkins on Ubuntu 16.04. Please make sure that your system already was updated and running commands with root privilege.
-Installing Step 1: Install Java OpenJDK 8 sudo apt update sudo apt install python-software-properties apt-transport-https -y sudo add-apt-repository ppa:openjdk-r/ppa sudo apt update sudo apt install openjdk-8-jdk -y  Verify Java after installing
-java -version  The command should be have a result like this:">
+<meta property="og:description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Install Jenkins on Ubuntu 16.04">
-<meta name="twitter:title" content="Install Jenkins on Ubuntu 16.04">
-<meta property="og:url" content="https://namnh68.github.io/2018/10/install-jenkins-on-ubuntu-16.04/">
-<meta property="twitter:url" content="https://namnh68.github.io/2018/10/install-jenkins-on-ubuntu-16.04/">
+<meta property="og:title" content="CICD in OpenStack">
+<meta name="twitter:title" content="CICD in OpenStack">
+<meta property="og:url" content="https://namnh68.github.io/2018/10/cicd-in-openstack/">
+<meta property="twitter:url" content="https://namnh68.github.io/2018/10/cicd-in-openstack/">
 <meta property="og:site_name" content="Nam Nguyen Hoai">
-<meta property="og:description" content="Introduction This guide is to install Jenkins on Ubuntu 16.04. Please make sure that your system already was updated and running commands with root privilege.
-Installing Step 1: Install Java OpenJDK 8 sudo apt update sudo apt install python-software-properties apt-transport-https -y sudo add-apt-repository ppa:openjdk-r/ppa sudo apt update sudo apt install openjdk-8-jdk -y  Verify Java after installing
-java -version  The command should be have a result like this:">
-<meta name="twitter:description" content="Introduction This guide is to install Jenkins on Ubuntu 16.04. Please make sure that your system already was updated and running commands with root privilege.
-Installing Step 1: Install Java OpenJDK 8 sudo apt update sudo apt install python-software-properties apt-transport-https -y sudo add-apt-repository ppa:openjdk-r/ppa sudo apt update sudo apt install openjdk-8-jdk -y  Verify Java after installing
-java -version  The command should be have a result like this:">
+<meta property="og:description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.">
+<meta name="twitter:description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2018-10-09T23:41:46">
+    <meta property="article:published_time" content="2018-10-22T20:40:48">
   
   
-    <meta property="article:modified_time" content="2018-10-09T23:41:46">
+    <meta property="article:modified_time" content="2018-10-22T20:40:48">
   
   
   
@@ -42,10 +34,6 @@ java -version  The command should be have a result like this:">
       <meta property="article:section" content="devops">
     
   
-  
-    
-      <meta property="article:tag" content="devops">
-    
   
 
 
@@ -61,12 +49,9 @@ java -version  The command should be have a result like this:">
 
 
 
-  <meta property="og:image" content="https://namnh68.github.io/images/jenkins.png">
-  <meta property="twitter:image" content="https://namnh68.github.io/images/jenkins.png">
+  <meta property="og:image" content="https://namnh68.github.io/images/zuul.png">
+  <meta property="twitter:image" content="https://namnh68.github.io/images/zuul.png">
 
-
-  <meta property="og:image" content="https://namnh68.github.io/images/jenkins.png">
-  <meta property="twitter:image" content="https://namnh68.github.io/images/jenkins.png">
 
 
 
@@ -75,14 +60,14 @@ java -version  The command should be have a result like this:">
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/043f8e2c307161bebbde436f911ca9f7?s=640">
 
 
-    <title>Install Jenkins on Ubuntu 16.04</title>
+    <title>CICD in OpenStack</title>
 
     <link rel="icon" href="https://namnh68.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://namnh68.github.io/2018/10/install-jenkins-on-ubuntu-16.04/">
+    <link rel="canonical" href="https://namnh68.github.io/2018/10/cicd-in-openstack/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -249,28 +234,30 @@ java -version  The command should be have a result like this:">
 </nav>
 
       
-  <div class="post-header-cover
-              text-left
-              "
-       style="background-image:url('/images/jenkins.png')"
-       data-behavior="5">
-    
-      <div class="post-header main-content-wrap text-left">
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Install Jenkins on Ubuntu 16.04
+      CICD in OpenStack
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-10-09T23:41:46&#43;07:00">
+      <time itemprop="datePublished" datetime="2018-10-22T20:40:48&#43;07:00">
         
   
   
   
   
-    October 9, 2018
+    October 22, 2018
   
 
       </time>
@@ -287,109 +274,60 @@ java -version  The command should be have a result like this:">
   </div>
 
 </div>
-    
-  </div>
-
-
-      <div id="main" data-behavior="5"
-        class="hasCover
-               hasCoverMetaIn
-               ">
-        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
-          
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
+              <p>OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production. Even if there is no any QA (Quality Assurance) and tester. In order to solve this question, OpenStack community has launched CI (Continuous Integration). Each source code pushed will be verified carefully before merging.</p>
 
-<h3 id="introduction">Introduction</h3>
+<p>When start investigating CI in OpenStack, you will see that OpenStack uses its OpenStack to build CI for OpenStack. That will make you confuse. Don&rsquo;t worry, I will explain for you cleanly.</p>
 
-<p>This guide is to install Jenkins on Ubuntu 16.04. Please make sure that your system already was updated and running commands with root privilege.</p>
+<p>Before contributing, each developer needs to have and understand DevOps culture in OpenStack and understand the workflow.</p>
 
-<h3 id="installing">Installing</h3>
+<p>The workflow of contributing as following:</p>
 
-<h4 id="step-1-install-java-openjdk-8">Step 1: Install Java OpenJDK 8</h4>
+<p><img src="https://namnh68.github.io/images/code_review.png" alt="The workflow contributing" /></p>
 
-<pre><code>sudo apt update
-sudo apt install python-software-properties apt-transport-https -y
-sudo add-apt-repository ppa:openjdk-r/ppa
-sudo apt update
-sudo apt install openjdk-8-jdk -y
-</code></pre>
+<p>Explain: OpenStack uses GIT model. A develop will clone source code on master branch from GitHup (like Nova, Neutron, Keystone), then they have to checkout a new branch with name related to bugs or their feature. After coding the new feature then they must have unittest or functional tests, even api test which depends on the scope of feature. After passing all old and new tests on local, they can push new source code to Gerrit (OpenStack use Gerrit to store source code for reviewing). At that time, OpenStack CI will run all test cases in the project and mask +1 if passing and -1 if not. Like this picture.</p>
 
-<p>Verify Java after installing</p>
+<p><img src="https://namnh68.github.io/images/ci_openstack_result.png" alt="CI OpenStack result" /></p>
 
-<pre><code>java -version
-</code></pre>
+<p>So requiremnt for each developer when uploading new feature or bugs is to write full unittest and know how to setup a CI for the feature if neccessary. It will be reviewed by other contributors and core-reviewers to make sure it is very good before merging. That is devops culture in OpenStack.</p>
 
-<p>The command should be have a result like this:</p>
+<p>For now, maybe you ask your self how can OpenStack build a such good CI like that?</p>
 
-<p><img src="https://namnh68.github.io/images/java_result_1.png" alt="Jenkins_images" /></p>
+<p><img src="https://namnh68.github.io/images/architecture_ci_openstack.png" alt="Architecture OpenStack" /></p>
 
-<h4 id="step-2-install-jenkins">Step 2: Install Jenkins</h4>
-
-<p>Add Jenkins key and repository to the system with the command below.</p>
-
-<pre><code>wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-echo 'deb https://pkg.jenkins.io/debian-stable binary/' | tee -a /etc/apt/sources.list
-</code></pre>
-
-<p>Update repository and install Jenkins</p>
-
-<pre><code>sudo apt update
-sudo apt install jenkins -y
-</code></pre>
-
-<p>Restart daemon and Jenkins.</p>
-
-<pre><code>systemctl restart jenkins
-</code></pre>
-
-<p>After running Jenkins then it will be open port 8080. Check it by this command:</p>
-
-<pre><code>netstart -an | grep 8080
-</code></pre>
-
-<h3 id="bonus-information">Bonus information</h3>
+<p>The above picture is the CI architecture. CI at OpenStack scale:</p>
 
 <ul>
-<li><a href="https://wiki.jenkins.io/display/JENKINS/Running+Jenkins+on+Port+80+or+443+using+iptables">How to open Jenkins with port 80 or 443</a></li>
+<li>&gt; 1500 repositories: There are more 1500 repos in <a href="https://github.com/openstack">OpenStack GitHub</a>, it means the repos will be used CI system.</li>
+<li>2000 jobs per hour: CI server will create and delete 2000 VMs (Virtual Machine) per hour, that is impressive number.</li>
+<li>13 regions of 5 public and 2 private OpenStack cloud: CI server backend is supported by the private and public clouds on 13 regions.</li>
 </ul>
 
-<p>TD;TR: Iptables commands is to redirect packets from 80 to 8080 and  443 to 8443</p>
+<p>OpenStack use Zuul as CI server and ansible playbook to control vitual machine.</p>
 
-<pre><code>sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
-sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8443
-</code></pre>
+<ul>
+<li><p>Zuul:</p></li>
 
-<p>Save Iptables on Ubuntu 16.04</p>
+<li><p>Zuul merger:</p></li>
 
-<pre><code>sudo apt install iptables-persistent -y
-sudo netfilter-persistent save
-sudo netfilter-persistent reload
-</code></pre>
+<li><p>Zuul launcher:</p></li>
 
-<h3 id="references">References</h3>
+<li><p>Nodepool:</p></li>
 
-<p>[1] <a href="https://www.howtoforge.com/tutorial/how-to-install-jenkins-with-apache-on-ubuntu-16-04/">https://www.howtoforge.com/tutorial/how-to-install-jenkins-with-apache-on-ubuntu-16-04/</a></p>
+<li><p>Cloud 1, 2, 3: This is private and public cloud, which are sponsored by Cloud providers. Especially, the private and public cloud is built from OpenStack with last release.</p></li>
+</ul>
 
-<p>[2] <a href="https://stackoverflow.com/questions/39621263/jenkins-fails-when-running-service-start-jenkins">https://stackoverflow.com/questions/39621263/jenkins-fails-when-running-service-start-jenkins</a></p>
+<p>When developer submit a patch set to Gerrit, then a notification will be sent to Zuul, then Zuul will request Cloud to provide a VM via Nodepool. Nodepool will send the information of the VM to Zuul, Zuul will request to Zuul Launcher with the information to run ansible playbook. After that, all test cases will be run on the VM to make sure source code is good. When core-reviewers accept this patch set then Zuul merger will start to merge this patch to GitHub repo. That&rsquo;s all steps of a patch set before merging.</p>
+
+<p><strong>Conclusion:</strong> OpenStack is a good solution to build private and public cloud. More over, it is also a very good solution for backend in CICD. CI/CD server can interact with OpenStack system via API to provide VM to run test case and deploy source code, after finishing the VM will be deleted automatically to saving resource.</p>
 
               
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
-              
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">TAGGED IN</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="https://namnh68.github.io/tags/devops/">devops</a>
-
-                  </div>
-                
               
             
             <div class="post-actions-wrap">
@@ -399,7 +337,7 @@ sudo netfilter-persistent reload
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/install-jenkins-on-centos-7/" data-tooltip="Install Jenkins on CentOS 7">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -407,7 +345,7 @@ sudo netfilter-persistent reload
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/" data-tooltip="Install OpenStack AIO via Kolla-ansible">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -425,13 +363,13 @@ sudo netfilter-persistent reload
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/install-jenkins-on-ubuntu-16.04/%29">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/cicd-in-openstack/%29">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/install-jenkins-on-ubuntu-16.04/%29">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/cicd-in-openstack/%29">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -480,7 +418,7 @@ sudo netfilter-persistent reload
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/install-jenkins-on-centos-7/" data-tooltip="Install Jenkins on CentOS 7">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -488,7 +426,7 @@ sudo netfilter-persistent reload
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/" data-tooltip="Install OpenStack AIO via Kolla-ansible">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -506,13 +444,13 @@ sudo netfilter-persistent reload
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/install-jenkins-on-ubuntu-16.04/%29">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/cicd-in-openstack/%29">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/install-jenkins-on-ubuntu-16.04/%29">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https://namnh68.github.io/2018/10/cicd-in-openstack/%29">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -542,13 +480,13 @@ sudo netfilter-persistent reload
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https%3A%2F%2Fnamnh68.github.io%2F2018%2F10%2Finstall-jenkins-on-ubuntu-16.04%2F%29">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/nam.nguyenhoai.71404%25!%28EXTRA%20string=https%3A%2F%2Fnamnh68.github.io%2F2018%2F10%2Fcicd-in-openstack%2F%29">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https%3A%2F%2Fnamnh68.github.io%2F2018%2F10%2Finstall-jenkins-on-ubuntu-16.04%2F%29">
+        <a class="share-option-btn" target="new" href="https://twitter.com/namnh68%25!%28EXTRA%20string=https%3A%2F%2Fnamnh68.github.io%2F2018%2F10%2Fcicd-in-openstack%2F%29">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
@@ -739,9 +677,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/namnh68.github.io\/2018\/10\/install-jenkins-on-ubuntu-16.04\/';
+          this.page.url = 'https:\/\/namnh68.github.io\/2018\/10\/cicd-in-openstack\/';
           
-            this.page.identifier = '\/2018\/10\/install-jenkins-on-ubuntu-16.04\/'
+            this.page.identifier = '\/2018\/10\/cicd-in-openstack\/'
           
         };
         (function() {

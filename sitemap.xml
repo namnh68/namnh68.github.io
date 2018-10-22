@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://namnh68.github.io/2018/10/cicd-in-openstack/</loc>
+    <lastmod>2018-10-22T20:40:48+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://namnh68.github.io/2018/10/install-openstack-aio-via-kolla-ansible/</loc>
     <lastmod>2018-10-14T11:43:33+07:00</lastmod>
   </url>
@@ -46,7 +51,7 @@
   
   <url>
     <loc>https://namnh68.github.io/categories/devops/</loc>
-    <lastmod>2018-10-12T20:36:13+07:00</lastmod>
+    <lastmod>2018-10-22T20:40:48+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -64,13 +69,13 @@
   
   <url>
     <loc>https://namnh68.github.io/</loc>
-    <lastmod>2018-10-14T11:43:33+07:00</lastmod>
+    <lastmod>2018-10-22T20:40:48+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://namnh68.github.io/post/</loc>
-    <lastmod>2018-10-14T11:43:33+07:00</lastmod>
+    <lastmod>2018-10-22T20:40:48+07:00</lastmod>
     <priority>0</priority>
   </url>
   
