@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.49 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Nam Nguyen Hoai">
 <meta name="keywords" content="openstack, devops, development, devops, cloud, openstack">
-<meta name="description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.">
+<meta name="description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this, each project has its function. For example: Neutron is to provide network as a service, Nova is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already in production.">
 
 
-<meta property="og:description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.">
+<meta property="og:description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this, each project has its function. For example: Neutron is to provide network as a service, Nova is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already in production.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CICD in OpenStack">
 <meta name="twitter:title" content="CICD in OpenStack">
 <meta property="og:url" content="https://namnh68.github.io/2018/10/cicd-in-openstack/">
 <meta property="twitter:url" content="https://namnh68.github.io/2018/10/cicd-in-openstack/">
 <meta property="og:site_name" content="Nam Nguyen Hoai">
-<meta property="og:description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.">
-<meta name="twitter:description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.">
+<meta property="og:description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this, each project has its function. For example: Neutron is to provide network as a service, Nova is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already in production.">
+<meta name="twitter:description" content="OpenStack is a platform to build private and public cloud, it includes so many projects to do this, each project has its function. For example: Neutron is to provide network as a service, Nova is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already in production.">
 <meta property="og:locale" content="en-us">
 
   
@@ -277,7 +277,7 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production. Even if there is no any QA (Quality Assurance) and tester. In order to solve this question, OpenStack community has launched CI (Continuous Integration). Each source code pushed will be verified carefully before merging.</p>
+              <p>OpenStack is a platform to build private and public cloud, it includes so many projects to do this, each project has its function. For example: Neutron is to provide network as a service, Nova is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already in production. Although there is no any QA (Quality Assurance) and Tester. In order to answer this question, OpenStack community has launched CI (Continuous Integration). Each source code pushed will be verified carefully before merging.</p>
 
 <p>When start investigating CI in OpenStack, you will see that OpenStack uses its OpenStack to build CI for OpenStack. That will make you confuse. Don&rsquo;t worry, I will explain for you cleanly.</p>
 
@@ -287,11 +287,11 @@
 
 <p><img src="https://namnh68.github.io/images/code_review.png" alt="The workflow contributing" /></p>
 
-<p>Explain: OpenStack uses GIT model. A develop will clone source code on master branch from GitHup (like Nova, Neutron, Keystone), then they have to checkout a new branch with name related to bugs or their feature. After coding the new feature then they must have unittest or functional tests, even api test which depends on the scope of feature. After passing all old and new tests on local, they can push new source code to Gerrit (OpenStack use Gerrit to store source code for reviewing). At that time, OpenStack CI will run all test cases in the project and mask +1 if passing and -1 if not. Like this picture.</p>
+<p>OpenStack uses GIT model. A developer will clone source code on master branch from GitHup (like Nova, Neutron, Keystone), then they have to checkout a new branch with name related to bugs or their feature. After coding the new feature then they must have unittest or functional tests, even api test which depends on the scope of feature. After passing all old and new tests on local, they can push new source code to Gerrit (OpenStack use Gerrit to store source code for reviewing). At that time, OpenStack CI will run all test cases in the project and mask +1 if passing and -1 if not. Like this picture.</p>
 
 <p><img src="https://namnh68.github.io/images/ci_openstack_result.png" alt="CI OpenStack result" /></p>
 
-<p>So requiremnt for each developer when uploading new feature or bugs is to write full unittest and know how to setup a CI for the feature if neccessary. It will be reviewed by other contributors and core-reviewers to make sure it is very good before merging. That is devops culture in OpenStack.</p>
+<p>So the requirement of each developer when uploading new feature or bugs is to write full unittest and know how to setup a CI test for the feature if neccessary. It will be reviewed by other developers and core-reviewer, they can discuss on the patch set to get a best solution. After getting agreement then two core-reviewers will mask +2 and workflow +1, then CI server will run gate tests. If passing all gate tests then the source will be merged to master branch.</p>
 
 <p>For now, maybe you ask your self how can OpenStack build a such good CI like that?</p>
 
@@ -308,20 +308,20 @@
 <p>OpenStack use Zuul as CI server and ansible playbook to control vitual machine.</p>
 
 <ul>
-<li><p>Zuul:</p></li>
+<li><p>Zuul: This component is the heart of Zuul, it listens events from Gerrit and request to other component run necessary jobs when having a patch set pushed.</p></li>
 
-<li><p>Zuul merger:</p></li>
+<li><p>Zuul merger: to merge patch set to GitHub. When passing all test cases then Zuul merger will start merging the patch set to GitHub.</p></li>
 
-<li><p>Zuul launcher:</p></li>
+<li><p>Zuul launcher: to run ansible playbook and report result to Zuul. After having VM information then Zuul will send it to Zuul launcher to run ansible playbook and send result to Zull after finishing.</p></li>
 
-<li><p>Nodepool:</p></li>
+<li><p>Nodepool: to manager Cloud backend. It is middle layer to get requirements from Zuul and interact with OpenStack API to create VM for testing.</p></li>
 
-<li><p>Cloud 1, 2, 3: This is private and public cloud, which are sponsored by Cloud providers. Especially, the private and public cloud is built from OpenStack with last release.</p></li>
+<li><p>Cloud 1, 2, 3: This is private and public cloud, which are sponsored by Cloud providers. Especially, the private and public cloud is built from OpenStack with last release. For example: the clouds are built on OpenStack Pike or Ocata.</p></li>
 </ul>
 
 <p>When developer submit a patch set to Gerrit, then a notification will be sent to Zuul, then Zuul will request Cloud to provide a VM via Nodepool. Nodepool will send the information of the VM to Zuul, Zuul will request to Zuul Launcher with the information to run ansible playbook. After that, all test cases will be run on the VM to make sure source code is good. When core-reviewers accept this patch set then Zuul merger will start to merge this patch to GitHub repo. That&rsquo;s all steps of a patch set before merging.</p>
 
-<p><strong>Conclusion:</strong> OpenStack is a good solution to build private and public cloud. More over, it is also a very good solution for backend in CICD. CI/CD server can interact with OpenStack system via API to provide VM to run test case and deploy source code, after finishing the VM will be deleted automatically to saving resource.</p>
+<p><strong>Conclusion:</strong> OpenStack is a good solution to build private and public cloud. More over, it is also a very good solution for backend in CICD. CI/CD server can interact with OpenStack system via API to provide VM for running test cases and deploy source code. After finishing, the VM will be deleted automatically to saving resource.</p>
 
               
             </div>
@@ -553,7 +553,7 @@
                   Oct 10, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">OpenStack is a platform to build private and public cloud, it includes so many projects to do this,each project has its function. For example: Neutron is to provide network as a service, Nove is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already for production.</div>
+              <div class="media-content hide-xs font-merryweather">OpenStack is a platform to build private and public cloud, it includes so many projects to do this, each project has its function. For example: Neutron is to provide network as a service, Nova is to provide compute as a service, etc. There is a large OpenStack community including developers and users to support it like developing new features. So one a big question is that how to verity source code from developers to make sure the source code is already in production.</div>
             </div>
             <div style="clear:both;"></div>
             <hr>
