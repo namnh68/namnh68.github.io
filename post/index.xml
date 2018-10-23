@@ -6,28 +6,10 @@
     <description>Recent content in Posts on Nam Nguyen Hoai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Oct 2018 08:00:03 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Oct 2018 20:40:48 +0700</lastBuildDate>
     
 	<atom:link href="https://namnh68.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Test2</title>
-      <link>https://namnh68.github.io/2018/10/test2/</link>
-      <pubDate>Tue, 23 Oct 2018 08:00:03 +0700</pubDate>
-      
-      <guid>https://namnh68.github.io/2018/10/test2/</guid>
-      <description>Test 2 - Nam Nguyen Hoai</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://namnh68.github.io/2018/10/test/</link>
-      <pubDate>Tue, 23 Oct 2018 07:08:48 +0700</pubDate>
-      
-      <guid>https://namnh68.github.io/2018/10/test/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>CICD in OpenStack</title>
