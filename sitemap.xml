@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://namnh68.github.io/2018/10/test2/</loc>
+    <lastmod>2018-10-23T08:00:03+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://namnh68.github.io/2018/10/test/</loc>
     <lastmod>2018-10-23T07:08:48+07:00</lastmod>
   </url>
@@ -74,13 +79,13 @@
   
   <url>
     <loc>https://namnh68.github.io/</loc>
-    <lastmod>2018-10-23T07:08:48+07:00</lastmod>
+    <lastmod>2018-10-23T08:00:03+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://namnh68.github.io/post/</loc>
-    <lastmod>2018-10-23T07:08:48+07:00</lastmod>
+    <lastmod>2018-10-23T08:00:03+07:00</lastmod>
     <priority>0</priority>
   </url>
   
