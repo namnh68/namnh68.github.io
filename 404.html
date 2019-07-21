@@ -170,7 +170,7 @@ Installing Step 1: Prepare environment  Networking: You need to setup two nodes 
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather">Introduction This article is to guide how to setup Jenkins on CentOS 7. All below commands will be run with root privilege.
-Installing Step 1: Update CentOS 7 system  You need to update your system to get lastes stable packages, then reboot.  yum install epel-release -y yum update reboot   Stop SeLinux   Step 2: Install Java 1.8  Before you can install Jenkins, you need to setup a Java virtual machine on your system.</div>
+Installing Step 1: Update CentOS 7 system  You need to update your system to get lastes stable packages, then reboot.  yum install epel-release -y yum update reboot   Stop SELinux  sed -i &quot;s/SELINUX=enforcing/SELINUX=disabled/g&quot; /etc/selinux/config reboot  Step 2: Install Java 1.8  Before you can install Jenkins, you need to setup a Java virtual machine on your system.</div>
             </div>
             <div style="clear:both;"></div>
             <hr>
